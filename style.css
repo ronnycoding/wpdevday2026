@@ -4,69 +4,211 @@ Author URI: https://gianko.com
 */
 :root,
 .editor-styles-wrapper {
-    --wp--preset--color--accent-5: #b5bdbc;
-    --wp--preset--color--custom-negro: #000000;
-    --wp--preset--color--custom-blanco: #fbfbfb;
-    --wp--preset--color--custom-verde-claro: #caf045;
-    --wp--preset--color--custom-verde-oscuro: #20de4a;
+  --wp--preset--color--accent-5: #b5bdbc;
+  --wp--preset--color--custom-negro: #000000;
+  --wp--preset--color--custom-blanco: #fbfbfb;
+  --wp--preset--color--custom-verde-claro: #caf045;
+  --wp--preset--color--custom-verde-oscuro: #20de4a;
 }
 
 .cyber-card,
 .editor-styles-wrapper .cyber-card {
-    position: relative;
-    /* Aseguramos que el contenido esté por encima del fondo */
-    z-index: 1; 
-  }
+  position: relative;
+  /* Aseguramos que el contenido esté por encima del fondo */
+  z-index: 1;
+}
 
 .cyber-card-p40,
 .editor-styles-wrapper .cyber-card-p40 {
-    padding: 40px;
-  }
-  
-  /* --- CAPA 1: El Borde y el Brillo (Glow) --- */
-  .cyber-card::before,
-  .editor-styles-wrapper .cyber-card::before {
-    content: "";
-    position: absolute;
-    inset: 0; /* Ocupa todo el espacio del padre */
-    background: var(--wp--preset--color--custom-verde-claro); /* Color Verde Neón */
-    z-index: -2; /* Se coloca al fondo */
-    
-    /* Recorte de esquinas (puedes ajustar los 20px para cambiar el tamaño del corte) */
-    clip-path: polygon(
-      20px 0, 
-      calc(100% - 20px) 0, 
-      100% 20px, 
-      100% calc(100% - 20px), 
-      calc(100% - 20px) 100%, 
-      20px 100%, 
-      0 calc(100% - 20px), 
-      0 20px
-    );
-  
-    /* El efecto de resplandor (Glow) */
-    filter: drop-shadow(0 0 5px var(--wp--preset--color--custom-verde-oscuro)); 
-  }
-  
-  /* --- CAPA 2: El Fondo Negro Interior --- */
-  .cyber-card::after,
-  .editor-styles-wrapper .cyber-card::after {
-    content: "";
-    position: absolute;
-    /* 'inset' define el grosor del borde (2px en este caso) */
-    inset: 2px; 
-    background: var(--wp--preset--color--custom-negro); /* Fondo casi negro */
-    z-index: -1; /* Entre el texto y el borde verde */
-    
-    /* El mismo recorte para que coincida */
-    clip-path: polygon(
-      20px 0, 
-      calc(100% - 20px) 0, 
-      100% 20px, 
-      100% calc(100% - 20px), 
-      calc(100% - 20px) 100%, 
-      20px 100%, 
-      0 calc(100% - 20px), 
-      0 20px
-    );
-  }
+  padding: 40px;
+}
+
+/* --- CAPA 1: El Borde y el Brillo (Glow) --- */
+.cyber-card::before,
+.editor-styles-wrapper .cyber-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* Ocupa todo el espacio del padre */
+  background: var(--wp--preset--color--custom-verde-claro);
+  /* Color Verde Neón */
+  z-index: -2;
+  /* Se coloca al fondo */
+
+  /* Recorte de esquinas (puedes ajustar los 20px para cambiar el tamaño del corte) */
+  clip-path: polygon(20px 0,
+      calc(100% - 20px) 0,
+      100% 20px,
+      100% calc(100% - 20px),
+      calc(100% - 20px) 100%,
+      20px 100%,
+      0 calc(100% - 20px),
+      0 20px);
+
+  /* El efecto de resplandor (Glow) */
+  filter: drop-shadow(0 0 5px var(--wp--preset--color--custom-verde-oscuro));
+}
+
+/* --- CAPA 2: El Fondo Negro Interior --- */
+.cyber-card::after,
+.editor-styles-wrapper .cyber-card::after {
+  content: "";
+  position: absolute;
+  /* 'inset' define el grosor del borde (2px en este caso) */
+  inset: 2px;
+  background: var(--wp--preset--color--custom-negro);
+  /* Fondo casi negro */
+  z-index: -1;
+  /* Entre el texto y el borde verde */
+
+  /* El mismo recorte para que coincida */
+  clip-path: polygon(20px 0,
+      calc(100% - 20px) 0,
+      100% 20px,
+      100% calc(100% - 20px),
+      calc(100% - 20px) 100%,
+      20px 100%,
+      0 calc(100% - 20px),
+      0 20px);
+}
+
+/* --- DevDay Global Styles --- */
+
+.wp-block-button__link.is-style-devday-btn {
+  background-color: var(--wp--preset--color--custom-verde-oscuro);
+  color: var(--wp--preset--color--custom-negro);
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 4px;
+  /* Slight rounded or sharp as per design */
+  border: none;
+  padding: 12px 24px;
+  font-size: 0.9rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.wp-block-button__link.is-style-devday-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px var(--wp--preset--color--custom-verde-claro);
+}
+
+/* --- Hero Section --- */
+.hero-section h1 {
+  font-family: 'Inter', sans-serif;
+  /* Assuming Inter or standard sans */
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 0.9;
+  color: var(--wp--preset--color--custom-verde-claro);
+  /* Default to green/white mix in HTML spans usually, but base green */
+}
+
+.hero-section p {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  opacity: 0.8;
+}
+
+/* --- About Section --- */
+.about-section {
+  background-color: var(--wp--preset--color--custom-blanco);
+  color: var(--wp--preset--color--custom-negro);
+  padding: 4rem 1rem;
+}
+
+.about-section h2 {
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+/* --- Speaker Circles --- */
+.speaker-circle img {
+  border-radius: 50%;
+  border: 2px solid var(--wp--preset--color--custom-verde-claro);
+  padding: 4px;
+  /* Space between image and border */
+  background: transparent;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  transition: filter 0.3s ease;
+}
+
+.speaker-circle img:hover {
+  filter: brightness(1.2) sepia(0.2);
+}
+
+/* --- Agenda Section --- */
+.agenda-section {
+  padding: 4rem 1rem;
+  background-color: var(--wp--preset--color--custom-blanco);
+  /* Or white */
+  color: var(--wp--preset--color--custom-negro);
+}
+
+.agenda-section h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin-bottom: 3rem;
+}
+
+.agenda-list {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.agenda-item {
+  display: flex;
+  justify-content: space-between;
+  /* Or generic layout */
+  padding: 1rem 0;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 0.5rem;
+}
+
+.agenda-item p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.agenda-item p:nth-child(1) {
+  font-weight: 700;
+  width: 25%;
+}
+
+.agenda-item p:nth-child(2) {
+  color: #666;
+  width: 30%;
+}
+
+.agenda-item p:nth-child(3) {
+  width: 40%;
+  text-align: right;
+}
+
+
+/* --- Venue Section --- */
+.venue-section {
+  position: relative;
+}
+
+.venue-card {
+  background-color: rgba(0, 0, 0, 0.85);
+  /* Dark semi-transparent */
+  color: #fff;
+  padding: 2rem;
+  border-left: 4px solid var(--wp--preset--color--custom-verde-oscuro);
+  max-width: 400px;
+}
+
+.venue-card h3 {
+  text-transform: uppercase;
+  color: #fff;
+  margin-top: 0;
+}
+
+.venue-card p {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
