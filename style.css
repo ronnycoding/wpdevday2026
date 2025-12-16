@@ -109,6 +109,46 @@ Author URI: https://gianko.com
   opacity: 0.8;
 }
 
+/* --- Browser Card Style --- */
+.browser-card {
+  border: 2px solid #fff;
+  background-color: rgba(0, 0, 0, 0.6);
+  /* Semi-transparent black body */
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.browser-header {
+  background-color: #fff;
+  height: 40px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  gap: 8px;
+}
+
+/* Create the three dots using pseudo-elements on the header or a dedicated element inside if content is empty */
+.browser-header::before {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ff5f56;
+  /* Red dot */
+  box-shadow: 20px 0 0 #ffbd2e, 40px 0 0 #27c93f;
+  /* Yellow and Green dots */
+}
+
+.browser-content {
+  padding: 40px;
+  text-align: center;
+}
+
+
 /* --- About Section --- */
 .about-section {
   background-color: var(--wp--preset--color--custom-blanco);
