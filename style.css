@@ -253,47 +253,45 @@ Author URI: https://gianko.com
   opacity: 0.9;
 }
 
-/* Transformación de tabla a diseño de tarjetas sin tocar HTML */
+/* Diseño de bloques sólidos usando la tabla original */
 .tix_tickets_table {
   width: 100%;
   border-collapse: separate;
-  border-spacing: 0 16px; /* Crea el espacio entre bloques */
+  border-spacing: 0; /* Espaciado ajustado a cero */
 }
 
-/* Encabezado: Fondo negro y letras blancas */
+/* Encabezado: Fondo negro, letras blancas, sin redondeado */
 .tix_tickets_table thead th {
   text-align: left;
-  padding: 15px 20px;
+  padding: 20px;
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  background-color: var(--wp--preset--color--custom-negro);
-  color: var(--wp--preset--color--custom-blanco);
+  background-color: var(--wp--preset--color--custom-negro) !important;
+  color: var(--wp--preset--color--custom-blanco) !important;
   font-weight: 700;
-  border: none;
+  border: none !important;
+  border-radius: 0 !important;
 }
 
-/* Estilo de la Fila (Bloques sólidos) */
+/* Estilo de la Fila (Bloques sólidos sin sombras ni redondeado) */
 .tix_tickets_table tbody tr:not(.tix-row-coupon) {
   background-color: var(--wp--preset--color--custom-blanco);
-  box-shadow: none;
-  border: 1px solid var(--wp--preset--color--accent-5);
+  box-shadow: none !important;
+  border-bottom: 1px solid var(--wp--preset--color--accent-5);
 }
 
 .tix_tickets_table tbody tr:not(.tix-row-coupon):hover {
-  border-color: var(--wp--preset--color--custom-verde-oscuro);
+  background-color: #ffffff;
+  outline: 1px solid var(--wp--preset--color--custom-verde-oscuro);
+  z-index: 1;
+  position: relative;
 }
 
 .tix_tickets_table td, 
 .tix_tickets_table th {
-  padding: 25px 20px;
-  border: none;
-}
-
-/* Sin bordes redondeados */
-.tix_tickets_table thead th,
-.tix_tickets_table tbody tr td,
-.tix_tickets_table tbody tr th {
+  padding: 20px;
+  border: none !important;
   border-radius: 0 !important;
 }
 
@@ -302,6 +300,7 @@ Author URI: https://gianko.com
   font-size: 18px;
   font-weight: 800;
   cursor: pointer;
+  color: var(--wp--preset--color--custom-negro);
 }
 
 .tix-column-price {
@@ -314,10 +313,10 @@ Author URI: https://gianko.com
   color: var(--wp--preset--color--accent-5);
 }
 
-/* Selector de cantidad (Recto y sólido) */
+/* Selector de cantidad: Recto y sólido */
 .tix-column-quantity select {
   padding: 10px 15px;
-  border-radius: 0;
+  border-radius: 0 !important;
   border: 1px solid var(--wp--preset--color--custom-negro);
   background: white;
   font-weight: 700;
@@ -327,7 +326,8 @@ Author URI: https://gianko.com
 /* Estilo del Cupón */
 .tix-row-coupon td {
   text-align: right;
-  padding: 10px 0 !important;
+  padding: 20px 0 !important;
+  background: transparent !important;
 }
 
 #tix-coupon-link {
@@ -338,29 +338,42 @@ Author URI: https://gianko.com
   border-bottom: 2px solid var(--wp--preset--color--custom-verde-claro);
 }
 
-/* BOTÓN DE COMPRA (Sólido, Rectangular y SIN BORDE) */
+#tix-coupon-input {
+  border: 1px solid var(--wp--preset--color--custom-negro);
+  border-radius: 0 !important;
+  padding: 8px;
+}
+
+/* BOTÓN DE COMPRA: Sólido, Rectangular, Sin Borde, Sin Degradado */
 input[type="submit"] {
-  background-color: var(--wp--preset--color--custom-verde-claro) !important;
+  background-color: var(--wp--preset--color--custom-verde-oscuro) !important;
   color: var(--wp--preset--color--custom-negro) !important;
   
   padding: 18px 45px !important;
-  border-radius: 0 !important;
+  border-radius: 0 !important; /* Recto */
+  border: none !important; /* Sin borde */
   
   font-weight: 900 !important;
   text-transform: uppercase !important;
   letter-spacing: 1px !important;
   font-size: 16px !important;
-  border: none !important; /* Eliminado el borde */
   cursor: pointer !important;
   
-  box-shadow: none !important;
+  box-shadow: none !important; /* Sin sombras */
   transition: background 0.2s ease !important;
   
   margin-top: 20px;
 }
 
 input[type="submit"]:hover {
-  background-color: var(--wp--preset--color--custom-verde-oscuro) !important;
+  background-color: var(--wp--preset--color--custom-verde-claro) !important;
+}
+
+/* Botón de Cupón específico */
+input[name="tix_coupon_submit"] {
+  padding: 8px 15px !important;
+  margin-top: 0 !important;
+  font-size: 12px !important;
 }
 
 .tix-clear {
@@ -373,6 +386,7 @@ input[type="submit"]:hover {
   .tix_tickets_table tbody tr { 
       display: block; 
       margin-bottom: 20px; 
+      border: 1px solid var(--wp--preset--color--accent-5);
   }
   .tix_tickets_table td, .tix_tickets_table th { 
       display: block; 
@@ -382,9 +396,13 @@ input[type="submit"]:hover {
       padding: 12px 20px;
   }
   .tix_tickets_table th { 
-      text-align: left; 
-      background: var(--wp--preset--color--custom-negro); 
-      color: var(--wp--preset--color--custom-blanco);
+      text-align: left !important; 
+      background: var(--wp--preset--color--custom-negro) !important; 
+      color: var(--wp--preset--color--custom-blanco) !important;
+  }
+  /* Título blanco en mobile */
+  .tix-ticket-title {
+      color: var(--wp--preset--color--custom-blanco) !important;
   }
   input[type="submit"] { width: 100%; }
 }
