@@ -6,9 +6,9 @@ Author URI: https://gianko.com
 .editor-styles-wrapper {
   --wp--preset--color--accent-5: #b5bdbc;
   --wp--preset--color--custom-chinese-black: #161514;
---wp--preset--color--white: #ffffff;
-  --wp--preset--color--custom-verde-claro: #caf045;
-  --wp--preset--color--custom-verde-oscuro: #20de4a;
+  --wp--preset--color--white: #ffffff;
+  --wp--preset--color--custom-maximun-green-yellow: #caf045;
+  --wp--preset--color--custom-malachite: #20de4a;
 }
 
 .cyber-card,
@@ -30,7 +30,7 @@ Author URI: https://gianko.com
   position: absolute;
   inset: 0;
   /* Ocupa todo el espacio del padre */
-  background: var(--wp--preset--color--custom-verde-claro);
+  background: var(--wp--preset--color--custom-maximun-green-yellow);
   /* Color Verde Neón */
   z-index: -2;
   /* Se coloca al fondo */
@@ -46,7 +46,7 @@ Author URI: https://gianko.com
       0 20px);
 
   /* El efecto de resplandor (Glow) */
-  filter: drop-shadow(0 0 5px var(--wp--preset--color--custom-verde-oscuro));
+  filter: drop-shadow(0 0 5px var(--wp--preset--color--custom-malachite));
 }
 
 /* --- CAPA 2: El Fondo Negro Interior --- */
@@ -75,7 +75,7 @@ Author URI: https://gianko.com
 /* --- DevDay Global Styles --- */
 
 .wp-block-button__link.is-style-devday-btn {
-  background-color: var(--wp--preset--color--custom-verde-oscuro);
+  background-color: var(--wp--preset--color--custom-malachite);
   color: var(--wp--preset--color--custom-chinese-black);
   font-weight: 700;
   text-transform: uppercase;
@@ -89,7 +89,7 @@ Author URI: https://gianko.com
 
 .wp-block-button__link.is-style-devday-btn:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 15px var(--wp--preset--color--custom-verde-claro);
+  box-shadow: 0 0 15px var(--wp--preset--color--custom-maximun-green-yellow);
 }
 
 /* --- Hero Section --- */
@@ -99,7 +99,7 @@ Author URI: https://gianko.com
   font-weight: 900;
   text-transform: uppercase;
   line-height: 0.9;
-  color: var(--wp--preset--color--custom-verde-claro);
+  color: var(--wp--preset--color--custom-maximun-green-yellow);
   /* Default to green/white mix in HTML spans usually, but base green */
 }
 
@@ -165,7 +165,7 @@ Author URI: https://gianko.com
 /* --- Speaker Circles --- */
 .speaker-circle img {
   border-radius: 50%;
-  border: 2px solid var(--wp--preset--color--custom-verde-claro);
+  border: 2px solid var(--wp--preset--color--custom-maximun-green-yellow);
   padding: 4px;
   /* Space between image and border */
   background: transparent;
@@ -238,7 +238,7 @@ Author URI: https://gianko.com
   /* Dark semi-transparent */
   color: #fff;
   padding: 2rem;
-  border-left: 4px solid var(--wp--preset--color--custom-verde-oscuro);
+  border-left: 4px solid var(--wp--preset--color--custom-malachite);
   max-width: 400px;
 }
 
@@ -283,7 +283,7 @@ Author URI: https://gianko.com
 
 .tix_tickets_table tbody tr:not(.tix-row-coupon):hover {
   background-color: #ffffff;
-  outline: 1px solid var(--wp--preset--color--custom-verde-oscuro);
+  outline: 1px solid var(--wp--preset--color--custom-malachite);
   z-index: 1;
   position: relative;
 }
@@ -335,7 +335,7 @@ Author URI: https://gianko.com
   text-decoration: none;
   font-weight: 600;
   font-size: 14px;
-  border-bottom: 2px solid var(--wp--preset--color--custom-verde-claro);
+  border-bottom: 2px solid var(--wp--preset--color--custom-maximun-green-yellow);
 }
 
 #tix-coupon-input {
@@ -346,7 +346,7 @@ Author URI: https://gianko.com
 
 /* BOTÓN DE COMPRA: Sólido, Rectangular, Sin Borde, Sin Degradado */
 input[type="submit"] {
-  background-color: var(--wp--preset--color--custom-verde-oscuro) !important;
+  background-color: var(--wp--preset--color--custom-malachite) !important;
   color: var(--wp--preset--color--custom-chinese-black) !important;
   
   padding: 18px 45px !important;
@@ -366,7 +366,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background-color: var(--wp--preset--color--custom-verde-claro) !important;
+  background-color: var(--wp--preset--color--custom-maximun-green-yellow) !important;
 }
 
 /* Botón de Cupón específico */
