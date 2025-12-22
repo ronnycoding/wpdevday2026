@@ -252,3 +252,140 @@ Author URI: https://gianko.com
   font-size: 0.9rem;
   opacity: 0.9;
 }
+
+
+        /* Transformación de tabla a diseño de tarjetas sin tocar HTML */
+        .tix_tickets_table {
+          width: 100%;
+          border-collapse: separate;
+          border-spacing: 0 16px; /* Crea el espacio entre tarjetas */
+      }
+
+      .tix_tickets_table thead th {
+          text-align: left;
+          padding: 10px 20px;
+          font-size: 12px;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          color: var(--wp--preset--color--accent-5);
+      }
+
+      /* Estilo de la Fila (Tarjeta) */
+      .tix_tickets_table tbody tr:not(.tix-row-coupon) {
+          background-color: var(--wp--preset--color--custom-blanco);
+          box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+          transition: transform 0.2s ease;
+      }
+
+      .tix_tickets_table tbody tr:not(.tix-row-coupon):hover {
+          transform: translateY(-3px);
+          box-shadow: 0 8px 20px rgba(32, 222, 74, 0.1);
+      }
+
+      .tix_tickets_table td, 
+      .tix_tickets_table th {
+          padding: 25px 20px;
+          border: none;
+      }
+
+      /* Bordes redondeados por celda (para simular tarjeta en el TR) */
+      .tix_tickets_table tbody tr td:first-child,
+      .tix_tickets_table tbody tr th:first-child {
+          border-radius: 16px 0 0 16px;
+      }
+
+      .tix_tickets_table tbody tr td:last-child {
+          border-radius: 0 16px 16px 0;
+      }
+
+      /* Títulos y Precios */
+      .tix-ticket-title {
+          font-size: 18px;
+          font-weight: 800;
+          cursor: pointer;
+      }
+
+      .tix-column-price {
+          font-weight: 700;
+          font-size: 1.1rem;
+      }
+
+      .tix-column-remaining {
+          font-size: 13px;
+          color: var(--wp--preset--color--accent-5);
+      }
+
+      /* Selector de cantidad */
+      .tix-column-quantity select {
+          padding: 10px 15px;
+          border-radius: 8px;
+          border: 2px solid #eee;
+          background: white;
+          font-weight: 700;
+          cursor: pointer;
+      }
+
+      /* Estilo del Cupón */
+      .tix-row-coupon td {
+          text-align: right;
+          padding: 10px 0 !important;
+      }
+
+      #tix-coupon-link {
+          color: var(--wp--preset--color--custom-negro);
+          text-decoration: none;
+          font-weight: 600;
+          font-size: 14px;
+          border-bottom: 2px solid var(--wp--preset--color--custom-verde-claro);
+      }
+
+      /* BOTÓN DE COMPRA (Forma y Colores de la Imagen) */
+      input[type="submit"] {
+          /* Gradiente de Verde Claro a Verde Oscuro */
+          background: linear-gradient(90deg, var(--wp--preset--color--custom-verde-claro) 0%, var(--wp--preset--color--custom-verde-oscuro) 100%) !important;
+          color: var(--wp--preset--color--custom-negro) !important;
+          
+          /* Forma de Píldora */
+          padding: 18px 45px !important;
+          border-radius: 50px !important;
+          
+          /* Estilos de fuente y sombra */
+          font-weight: 900 !important;
+          text-transform: uppercase !important;
+          letter-spacing: 1px !important;
+          font-size: 16px !important;
+          border: none !important;
+          cursor: pointer !important;
+          
+          /* Sombra Glow */
+          box-shadow: 0 10px 20px rgba(32, 222, 74, 0.3) !important;
+          transition: all 0.3s ease !important;
+          
+          /* Posicionamiento */
+          margin-top: 20px;
+      }
+
+      input[type="submit"]:hover {
+          transform: scale(1.05);
+          box-shadow: 0 12px 25px rgba(32, 222, 74, 0.5) !important;
+          filter: brightness(1.05);
+      }
+
+      .tix-clear {
+          clear: both;
+      }
+
+      /* Mobile Optimization */
+      @media (max-width: 600px) {
+          .tix_tickets_table thead { display: none; }
+          .tix_tickets_table tbody tr { display: block; margin-bottom: 20px; border-radius: 16px !important; }
+          .tix_tickets_table td, .tix_tickets_table th { 
+              display: block; 
+              width: 100%; 
+              text-align: right; 
+              box-sizing: border-box;
+              padding: 12px 20px;
+          }
+          .tix_tickets_table th { text-align: left; background: #fafafa; border-radius: 16px 16px 0 0 !important; }
+          input[type="submit"] { width: 100%; }
+      }
