@@ -5,8 +5,8 @@ Author URI: https://gianko.com
 :root,
 .editor-styles-wrapper {
   --wp--preset--color--accent-5: #b5bdbc;
-  --wp--preset--color--custom-negro: #000000;
-  --wp--preset--color--custom-blanco: #fbfbfb;
+  --wp--preset--color--custom-chinese-black: #161514;
+--wp--preset--color--white: #ffffff;
   --wp--preset--color--custom-verde-claro: #caf045;
   --wp--preset--color--custom-verde-oscuro: #20de4a;
 }
@@ -56,7 +56,7 @@ Author URI: https://gianko.com
   position: absolute;
   /* 'inset' define el grosor del borde (2px en este caso) */
   inset: 2px;
-  background: var(--wp--preset--color--custom-negro);
+  background: var(--wp--preset--color--custom-chinese-black);
   /* Fondo casi negro */
   z-index: -1;
   /* Entre el texto y el borde verde */
@@ -76,7 +76,7 @@ Author URI: https://gianko.com
 
 .wp-block-button__link.is-style-devday-btn {
   background-color: var(--wp--preset--color--custom-verde-oscuro);
-  color: var(--wp--preset--color--custom-negro);
+  color: var(--wp--preset--color--custom-chinese-black);
   font-weight: 700;
   text-transform: uppercase;
   border-radius: 4px;
@@ -151,8 +151,8 @@ Author URI: https://gianko.com
 
 /* --- About Section --- */
 .about-section {
-  background-color: var(--wp--preset--color--custom-blanco);
-  color: var(--wp--preset--color--custom-negro);
+  background-color: var(--wp--preset--color--white);
+  color: var(--wp--preset--color--custom-chinese-black);
   padding: 4rem 1rem;
 }
 
@@ -181,9 +181,9 @@ Author URI: https://gianko.com
 /* --- Agenda Section --- */
 .agenda-section {
   padding: 4rem 1rem;
-  background-color: var(--wp--preset--color--custom-blanco);
+  background-color: var(--wp--preset--color--white);
   /* Or white */
-  color: var(--wp--preset--color--custom-negro);
+  color: var(--wp--preset--color--custom-chinese-black);
 }
 
 .agenda-section h2 {
@@ -267,8 +267,8 @@ Author URI: https://gianko.com
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  background-color: var(--wp--preset--color--custom-negro) !important;
-  color: var(--wp--preset--color--custom-blanco) !important;
+  background-color: var(--wp--preset--color--custom-chinese-black) !important;
+  color: var(--wp--preset--color--white) !important;
   font-weight: 700;
   border: none !important;
   border-radius: 0 !important;
@@ -276,7 +276,7 @@ Author URI: https://gianko.com
 
 /* Estilo de la Fila (Bloques sólidos sin sombras ni redondeado) */
 .tix_tickets_table tbody tr:not(.tix-row-coupon) {
-  background-color: var(--wp--preset--color--custom-blanco);
+  background-color: var(--wp--preset--color--white);
   box-shadow: none !important;
   border-bottom: 1px solid var(--wp--preset--color--accent-5);
 }
@@ -300,7 +300,7 @@ Author URI: https://gianko.com
   font-size: 18px;
   font-weight: 800;
   cursor: pointer;
-  color: var(--wp--preset--color--custom-negro);
+  color: var(--wp--preset--color--custom-chinese-black);
 }
 
 .tix-column-price {
@@ -317,7 +317,7 @@ Author URI: https://gianko.com
 .tix-column-quantity select {
   padding: 10px 15px;
   border-radius: 0 !important;
-  border: 1px solid var(--wp--preset--color--custom-negro);
+  border: 1px solid var(--wp--preset--color--custom-chinese-black);
   background: white;
   font-weight: 700;
   cursor: pointer;
@@ -331,7 +331,7 @@ Author URI: https://gianko.com
 }
 
 #tix-coupon-link {
-  color: var(--wp--preset--color--custom-negro);
+  color: var(--wp--preset--color--custom-chinese-black);
   text-decoration: none;
   font-weight: 600;
   font-size: 14px;
@@ -339,7 +339,7 @@ Author URI: https://gianko.com
 }
 
 #tix-coupon-input {
-  border: 1px solid var(--wp--preset--color--custom-negro);
+  border: 1px solid var(--wp--preset--color--custom-chinese-black);
   border-radius: 0 !important;
   padding: 8px;
 }
@@ -347,7 +347,7 @@ Author URI: https://gianko.com
 /* BOTÓN DE COMPRA: Sólido, Rectangular, Sin Borde, Sin Degradado */
 input[type="submit"] {
   background-color: var(--wp--preset--color--custom-verde-oscuro) !important;
-  color: var(--wp--preset--color--custom-negro) !important;
+  color: var(--wp--preset--color--custom-chinese-black) !important;
   
   padding: 18px 45px !important;
   border-radius: 0 !important; /* Recto */
@@ -397,12 +397,12 @@ input[name="tix_coupon_submit"] {
   }
   .tix_tickets_table th { 
       text-align: left !important; 
-      background: var(--wp--preset--color--custom-negro) !important; 
-      color: var(--wp--preset--color--custom-blanco) !important;
+      background: var(--wp--preset--color--custom-chinese-black) !important; 
+      color: var(--wp--preset--color--white) !important;
   }
   /* Título blanco en mobile */
   .tix-ticket-title {
-      color: var(--wp--preset--color--custom-blanco) !important;
+      color: var(--wp--preset--color--white) !important;
   }
   input[type="submit"] { width: 100%; }
 }
