@@ -416,3 +416,8 @@ input[name="tix_coupon_submit"] {
 td.tix-column-remaining::after {
   content: " - Entradas diponibles";
 }
+/* --- Tickets Section --- */
+div#tix {
+  max-width: 800px;
+  margin: 0 auto;
+}
